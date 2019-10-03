@@ -58,7 +58,7 @@ type Falsy = false | null | undefined | 0 | "";
 
 export const parseOptionalDate = (date: Date | string | Falsy, defaultValue: Date) => {
 	if (date) {
-		const parsed = parse(date.toString(), 'dd/MM/YYYY', new Date());
+		const parsed = parse(date.toString(), 'DD/MM/YYYY', new Date());
 		if (isValid(parsed)) return parsed;
 	}
 	return defaultValue;
