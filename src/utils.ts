@@ -6,7 +6,7 @@ import {
 	isBefore,
 	addDays,
 	isSameDay,
-	isWithinRange,
+	isWithinInterval,
 	parse,
 	isValid
 } from "date-fns";
@@ -43,7 +43,7 @@ export const isEndOfRange = ({ endDate }: DateRange, day: Date) =>
 export const inDateRange = ({ startDate, endDate }: DateRange, day: Date) =>
 	(startDate &&
 		endDate &&
-		(isWithinRange(day, startDate, endDate) ||
+		(isWithinInterval(day, {start: startDate, end: endDate}) ||
 			isSameDay(day, startDate) ||
 			isSameDay(day, endDate))) as boolean;
 
@@ -58,7 +58,7 @@ type Falsy = false | null | undefined | 0 | "";
 
 export const parseOptionalDate = (date: Date | string | Falsy, defaultValue: Date) => {
 	if (date) {
-		const parsed = parse(date);
+		const parsed = parse(date.toString(), 'dd/MM/YYYY', new Date());
 		if (isValid(parsed)) return parsed;
 	}
 	return defaultValue;
