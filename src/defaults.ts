@@ -12,37 +12,37 @@ import {
 
 const getDefaultRanges = (date: Date): DefinedRange[] => [
 	{
-		label: "Today",
+		label: "Hoy",
 		startDate: date,
 		endDate: date
 	},
 	{
-		label: "Yesterday",
+		label: "Ayer",
 		startDate: addDays(date, -1),
 		endDate: addDays(date, -1)
 	},
 	{
-		label: "This Week",
+		label: "Esta Semana",
 		startDate: startOfWeek(date),
 		endDate: endOfWeek(date)
 	},
 	{
-		label: "Last Week",
+		label: "Semana Pasada",
 		startDate: startOfWeek(addWeeks(date, -1)),
 		endDate: endOfWeek(addWeeks(date, -1))
 	},
 	{
-		label: "Last 7 Days",
+		label: "Últimos 7 Días",
 		startDate: addWeeks(date, -1),
 		endDate: date
 	},
 	{
-		label: "This Month",
+		label: "Este Mes",
 		startDate: startOfMonth(date),
 		endDate: endOfMonth(date)
 	},
 	{
-		label: "Last Month",
+		label: "Mes Pasado",
 		startDate: startOfMonth(addMonths(date, -1)),
 		endDate: endOfMonth(addMonths(date, -1))
 	}
