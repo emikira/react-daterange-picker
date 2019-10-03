@@ -34,18 +34,18 @@ const styles = createStyles({
 });
 
 const MONTHS = [
-	"Jan",
+	"Ene",
 	"Feb",
 	"Mar",
-	"Apr",
+	"Abr",
 	"May",
-	"June",
-	"July",
-	"Aug",
+	"Jun",
+	"Jul",
+	"Ago",
 	"Sept",
 	"Oct",
 	"Nov",
-	"Dec"
+	"Dic"
 ];
 
 const generateYears = (relativeTo: Date, count: number) => {
