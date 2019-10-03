@@ -28,7 +28,7 @@ const styles = (theme: Theme) =>
 		},
 		divider: {
 			borderLeft: `1px solid ${theme.palette.action.hover}`,
-			marginBottom: 20
+			marginBottom: 20,
 		}
 	});
 
@@ -71,7 +71,7 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 	const canNavigateCloser = differenceInCalendarMonths(secondMonth, firstMonth) >= 2;
 	const commonProps = { dateRange, minDate, maxDate, helpers, handlers };
 	return (
-		<Paper elevation={5} square>
+		<Paper elevation={5} square className="datepicker-custom">
 			<Grid container direction="row" wrap="nowrap">
 				<Grid>
 					<Grid container className={classes.header} alignItems="center">
