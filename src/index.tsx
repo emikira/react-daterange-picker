@@ -48,15 +48,15 @@ interface DateRangePickerProps {
 const theme = createMuiTheme({
 	palette: {
 		primary: {
-		  light: 'red',
-		  main: 'green',
-		  dark: 'brown',
+		  light: 'rgba(255,0,0)',
+		  main: 'rgba(0,255,0)',
+		  dark: 'rgba(0,0,255)',
 		  contrastText: '#fff',
 		},
 		secondary: {
-		  light: 'lightgrey',
-		  main: 'blue',
-		  dark: 'black',
+			light: 'rgba(255,0,0)',
+			main: 'rgba(0,255,0)',
+			dark: 'rgba(0,0,255)',
 		  contrastText: '#000',
 		},
 	}
