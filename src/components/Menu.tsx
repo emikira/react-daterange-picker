@@ -118,14 +118,6 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 					/>
 				</Grid>
 			</Grid>
-			<Grid>
-				<Button>
-					APLICAR
-				</Button>
-				<Button>
-					Cancelar
-				</Button>
-			</Grid>
 		</Paper>
 	);
 };
