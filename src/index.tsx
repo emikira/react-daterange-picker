@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ThemeProvider } from "@material-ui/styles";
+import { MuiThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core";
 import {
 	addMonths,
@@ -165,7 +165,7 @@ const DateRangePickerImpl: React.FunctionComponent<DateRangePickerProps> = props
 		onMonthNavigate
 	};
 
-	return <ThemeProvider theme={theme}>
+	return <MuiThemeProvider theme={theme}>
 		{
 			open ? (
 				<Menu
@@ -183,7 +183,7 @@ const DateRangePickerImpl: React.FunctionComponent<DateRangePickerProps> = props
 				/>
 			) : null
 		}
-	</ThemeProvider>
+	</MuiThemeProvider>
 };
 
 export { DateRange, DefinedRange } from "./types";
