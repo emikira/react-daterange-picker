@@ -6,7 +6,7 @@ export default createMuiTheme({
       type: "dark",
       primary: {
         main: "#FF9167",
-        light: "rgb(166, 212, 250)",
+        light: "rgb(255, 174, 143)",
         dark: "#FF9167",
         contrastText: "rgba(0, 0, 0, 0.87)"
       },

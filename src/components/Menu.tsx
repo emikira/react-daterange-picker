@@ -7,7 +7,8 @@ import {
 	createStyles,
 	WithStyles,
 	Theme,
-	withStyles
+	withStyles,
+	Button
 } from "@material-ui/core";
 import { format, differenceInCalendarMonths } from "date-fns";
 import { es } from 'date-fns/locale';
@@ -71,7 +72,7 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 	const canNavigateCloser = differenceInCalendarMonths(secondMonth, firstMonth) >= 2;
 	const commonProps = { dateRange, minDate, maxDate, helpers, handlers };
 	return (
-		<Paper elevation={5} square className="datepicker-custom">
+		<Paper elevation={5} square >
 			<Grid container direction="row" wrap="nowrap">
 				<Grid>
 					<Grid container className={classes.header} alignItems="center">
@@ -116,6 +117,14 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 						setRange={setDateRange}
 					/>
 				</Grid>
+			</Grid>
+			<Grid>
+				<Button>
+					APLICAR
+				</Button>
+				<Button>
+					Cancelar
+				</Button>
 			</Grid>
 		</Paper>
 	);
