@@ -47,8 +47,19 @@ interface DateRangePickerProps {
 
 const theme = createMuiTheme({
 	palette: {
-	  type: 'dark',
-	},
+		primary: {
+		  light: 'red',
+		  main: 'green',
+		  dark: 'brown',
+		  contrastText: '#fff',
+		},
+		secondary: {
+		  light: 'lightgrey',
+		  main: 'blue',
+		  dark: 'black',
+		  contrastText: '#000',
+		},
+	}
 });
 
 const DateRangePickerImpl: React.FunctionComponent<DateRangePickerProps> = props => {
