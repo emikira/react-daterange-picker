@@ -50,7 +50,7 @@ const styles = (theme: Theme) =>
 			backgroundColor: theme.palette.primary.dark
 		},
 		highlighted: {
-			backgroundColor: theme.palette.primary.dark
+			backgroundColor: theme.palette.action.hover
 		},
 		contrast: {
 			color: theme.palette.primary.contrastText

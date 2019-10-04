@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ThemeProvider } from "@material-ui/styles";
 import {
 	addMonths,
 	isSameDay,
@@ -146,21 +147,29 @@ const DateRangePickerImpl: React.FunctionComponent<DateRangePickerProps> = props
 		onMonthNavigate
 	};
 
-	return open ? (
-		<Menu
-			dateRange={dateRange}
-			minDate={minDateValid}
-			maxDate={maxDateValid}
-			ranges={definedRanges}
-			firstMonth={firstMonth}
-			secondMonth={secondMonth}
-			setFirstMonth={setFirstMonthValidated}
-			setSecondMonth={setSecondMonthValidated}
-			setDateRange={setDateRangeValidated}
-			helpers={helpers}
-			handlers={handlers}
-		/>
-	) : null;
+	const theme = {
+		background: '#424242'
+	}
+
+	return <ThemeProvider theme={theme}>
+		{
+			open ? (
+				<Menu
+					dateRange={dateRange}
+					minDate={minDateValid}
+					maxDate={maxDateValid}
+					ranges={definedRanges}
+					firstMonth={firstMonth}
+					secondMonth={secondMonth}
+					setFirstMonth={setFirstMonthValidated}
+					setSecondMonth={setSecondMonthValidated}
+					setDateRange={setDateRangeValidated}
+					helpers={helpers}
+					handlers={handlers}
+				/>
+			) : null
+		}
+	</ThemeProvider>
 };
 
 export { DateRange, DefinedRange } from "./types";
