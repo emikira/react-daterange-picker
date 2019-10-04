@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ThemeProvider } from "@material-ui/styles";
+import { createMuiTheme } from "@material-ui/core";
 import {
 	addMonths,
 	isSameDay,
@@ -43,6 +44,12 @@ interface DateRangePickerProps {
 	maxDate?: Date | string;
 	onChange: (dateRange: DateRange) => void;
 }
+
+const theme = createMuiTheme({
+	palette: {
+	  type: 'dark',
+	},
+});
 
 const DateRangePickerImpl: React.FunctionComponent<DateRangePickerProps> = props => {
 	const today = new Date();
@@ -146,10 +153,6 @@ const DateRangePickerImpl: React.FunctionComponent<DateRangePickerProps> = props
 		onDayHover,
 		onMonthNavigate
 	};
-
-	const theme = {
-		background: '#424242'
-	}
 
 	return <ThemeProvider theme={theme}>
 		{
