@@ -29,14 +29,14 @@ const styles = (theme: Theme) =>
 			width: 290
 		},
 		weekDaysContainer: {
-			marginTop: 10,
+			marginTop: 5,
 			paddingLeft: 30,
 			paddingRight: 30
 		},
 		daysContainer: {
 			paddingLeft: 15,
 			paddingRight: 15,
-			marginTop: 15,
+			marginTop: 5,
 			marginBottom: 20
 		}
 	});
