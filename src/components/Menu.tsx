@@ -30,6 +30,9 @@ const styles = (theme: Theme) =>
 		divider: {
 			borderLeft: `1px solid ${theme.palette.action.hover}`,
 			marginBottom: 20,
+		},
+		container: {
+			boxShadow: 'none'
 		}
 	});
 
@@ -72,7 +75,7 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 	const canNavigateCloser = differenceInCalendarMonths(secondMonth, firstMonth) >= 2;
 	const commonProps = { dateRange, minDate, maxDate, helpers, handlers };
 	return (
-		<Paper square >
+		<Paper className={classes.container} square >
 			<Grid container direction="row" wrap="nowrap">
 				<Grid>
 					<Grid container className={classes.header} alignItems="center">
